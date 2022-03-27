@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  <bean id = "Customer1" class="Question1.Customer">
+		<property name="customerId" value = "123" />
+		<property name="customerName" value = "bharath" />
+		<property name="customerContact" value = "9985150995" />
+		<property name="customerAddress" ref="Customeradd" />
+	</bean>
+	
+	<bean id = "Customeradd" class="Question1.Address" >
+		<property name="street" value = "chipura"/>
+		<property name="city" value = "vijayawada"/>
+		<property name="state" value = "Andhara Pradesh"/>
+		<property name="zip" value = "520001"/>
+		<property name="country" value = "India"/>
+	</bean>  -->
+<bean id="Customer2" class="Question1.Customer">
+<constructor-arg name="customerId" value="123"/>
+<constructor-arg name="customerName" value="mani"/>
+<constructor-arg name="customerContact" value="9324569877"/>
+<constructor-arg name="customerAddress" ref="Customeradd1"/>
+</bean>
+<bean id="Customeradd1" class="Question1.Address">
+<constructor-arg name="street" value="chipura"/>
+<constructor-arg name="city" value="vijayawada"/>
+<constructor-arg name="state" value="Andhara Pradesh"/>
+<constructor-arg name="zip" value="520001"/>
+<constructor-arg name="country" value="India"/>
+</bean>
+</beans>
